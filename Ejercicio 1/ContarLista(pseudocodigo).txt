@@ -1,0 +1,34 @@
+Algoritmo ContarLista
+	Escribir 'Ingrese la cantidad de elementos de la lista'
+	Definir n, i, positivos, negativos, ceros, totales Como Entero
+	Leer n
+	Dimensionar lista(n)
+	// Inicializamos los contadores
+	positivos <- 0 // definimos todas las variables, n para el tamaño de la Lista, i para iterarla, positivos para contar positivos y lo mismo con negativos, ceros y totales
+	negativos <- 0 // leemos la entrada por teclado de n
+	ceros <- 0 // definimos set de datos a trabajar como un array de n objetos
+	totales <- 0
+	// Capturamos los datos de la lista en sus respectivas posiciones en la lista
+	Para i<-1 Hasta n Con Paso 1 Hacer
+		Escribir 'Ingrese el dato ', i, ':'
+		Leer lista[i]
+	FinPara // los capturamos con un bucle for
+	// Recorremos la lista
+	Para i<-1 Hasta n Con Paso 1 Hacer
+		Si lista[i]>0 Entonces
+			positivos <- positivos+1
+		SiNo // también la recorremos con un for
+			Si lista[i]<0 Entonces // si el numero es positivo le sumamos 1 a los positivos
+				negativos <- negativos+1
+			SiNo // si no es positivo
+				ceros <- ceros+1 // si es negativo sumamos 1 a los negativos
+			FinSi
+		FinSi // Al estar trabajando con enteros, si el numero no es negativo ni positivo es 0 por lo que sumamos 1 a los ceros
+		totales <- totales+1
+	FinPara
+	// imoprimimos resultados
+	Escribir 'Cantidad de positivos: ', positivos
+	Escribir 'Cantidad de negativos: ', negativos // Trabajamos un numero, por tanto sumamos uno a los totales
+	Escribir 'Cantidad de ceros: ', ceros
+	Escribir 'Cantidad total: ', totales
+FinAlgoritmo
