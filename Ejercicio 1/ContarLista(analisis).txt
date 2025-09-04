@@ -1,0 +1,15 @@
+Ejercicio I
+plantear un argumento es PSEInt (análisis del problema, DFD, pseudocódigo, y pruebas) que dada una cantidad n de números enteros determine y muestre en pantalla la cantidad total de números positivos, negativos, ceros y la cantidad total de números analizados
+
+Lista = (n0, n1, ..., nn)
+positivos = 0
+negativos = 0
+ceros = 
+totales = 0
+subíndice = 0
+
+Si lista en posición subíndice es mayor a 0 entonces positivos +1
+Si lista en posición subíndice es menor a 0 entonces negativos +1
+Si lista en posición subíndice es igual a 0 entonces ceros +1
+Totales +1
+Se repite este proceso hasta llegar a Lista en subíndice n
