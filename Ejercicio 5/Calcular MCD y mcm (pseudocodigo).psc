@@ -1,0 +1,69 @@
+Algoritmo Calcular_MCD_y_mcm
+	Escribir "Ingrese el valor de A:"
+	Leer A
+	Escribir "Ingrese el valor de B:"
+	Leer B
+	Escribir "Ingrese el valor de C:"
+	Leer C
+	
+	Definir menor, divisor, mcd Como Entero
+	mcd <- 1
+	
+	// Encontrar el menor de los tres (no hay divisor mayor que el menor)
+	Si A < B Y A < C Entonces
+		menor <- A
+	SiNo
+		Si B < A Y B < C Entonces
+			menor <- B
+		SiNo
+			menor <- C
+		FinSi
+	FinSi
+	
+	// Probar todos los posibles divisores desde 2 hasta el menor
+	Para divisor <- 2 Hasta menor Hacer
+		Si (A MOD divisor = 0) Y (B MOD divisor = 0) Y (C MOD divisor = 0) Entonces
+			mcd <- divisor
+		FinSi
+	FinPara
+	
+	Escribir "El MCD de ", A, ", ", B, " y ", C, " es: ", mcd
+	
+	Definir mcd_ab, mcm_ab, mcd_abc, mcm Como Entero
+	
+	// Primero MCD(A, B)
+	mcd_ab <- 1
+	Si A < B Entonces
+		menor <- A
+	SiNo
+		menor <- B
+	FinSi
+	
+	Para divisor <- 2 Hasta menor Hacer
+		Si (A MOD divisor = 0) Y (B MOD divisor = 0) Entonces
+			mcd_ab <- divisor
+		FinSi
+	FinPara
+	
+	mcm_ab <- (A * B) / mcd_ab
+	
+	// Ahora MCD(mcm_ab, C)
+	mcd_abc <- 1
+	Si mcm_ab < C Entonces
+		menor <- mcm_ab
+	SiNo
+		menor <- C
+	FinSi
+	
+	Para divisor <- 2 Hasta menor Hacer
+		Si (mcm_ab MOD divisor = 0) Y (C MOD divisor = 0) Entonces
+			mcd_abc <- divisor
+		FinSi
+	FinPara
+	
+	// Finalmente MCM(A, B, C)
+	mcm <- (mcm_ab * C) / mcd_abc
+	
+	Escribir "El MCM de ", A, ", ", B, " y ", C, " es: ", mcm
+	
+FinAlgoritmo

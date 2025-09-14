@@ -1,0 +1,20 @@
+un inversionista desea colocar un capital (c) en una entidad bancaria que le ofrece una tasa de interes nominal anual (CI) durante (n) cantidad de años. El banco también le ofrece los siguientes sistemas de capitalizacion de los intereses: mensual, trimestral, semestral, anual.
+Plantear un algoritmo que determine el valor futuro (VF) de dicha inversión sabiendo que:
+
+VF = C * (1+i)^n
+
+i = Tasa de interés efectiva capitalizable por periodo
+
+i = I/P
+
+I debe estar en porcentaje, por tanto la formula completa es i = (I/100) / P, siendo P el numero de capitalización (las veces que los intereses pasan a ser parte de la inversión) en un año
+
+así que debemos leer el capital inicial, luego la tasa nominal anual, luego leer la cantidad de años de la inversion, por ultimo los periodos de capitalización. Ahora simplemente aplicamos la formula i = (I/100) / P, y ya tenemos la taza de interés efectiva capitalizable por periodo, después el numero de periodos capitalizados:
+
+N = n * p
+
+y por ultimo reemplazamos en la formula para VF
+
+VF = C * (1+i)^n
+
+y ya está, mostramos el valor futuro (VF)

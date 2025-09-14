@@ -1,0 +1,19 @@
+Algoritmo Calcular_factorial
+	Escribir "Introduzca el numero para calcular el factorial"
+	Leer n
+	Si n = 0
+		Escribir 1
+	SiNo 
+		Si n < 0
+			Escribir "El factorial de un numero negativo no existe"
+		SiNo
+			para i <- n-1 Hasta 1 Con Paso -1
+				n <- n * i
+			FinPara
+			
+			Escribir "El factorial es: ", n
+		FinSi		
+		
+	FinSi
+	
+FinAlgoritmo

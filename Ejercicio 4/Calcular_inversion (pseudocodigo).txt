@@ -1,0 +1,36 @@
+Algoritmo Calcular_inversion
+	Escribir "Ingrese el capital inicial (C):"
+	Leer capital_inicial
+	
+	Escribir "Ingrese la tasa nominal anual en porcentaje (I):"
+	Leer tasa_nominal_anual
+	
+	Escribir "Ingrese la cantidad de años (n):"
+	Leer años
+	
+	Escribir "Seleccione el sistema de capitalización:"
+	Escribir "1. Mensual"
+	Escribir "2. Trimestral"
+	Escribir "3. Semestral"
+	Escribir "4. Anual"
+	Leer opcion
+	
+	// Determinar P según la opción
+	Segun opcion Hacer
+		1: periodos_capitalizacion <- 12
+		2: periodos_capitalizacion <- 4
+		3: periodos_capitalizacion <- 2
+		4: periodos_capitalizacion <- 1
+		De Otro Modo:
+			Escribir "Opción inválida"
+	FinSegun
+
+// Calcular i (tasa por periodo) y n total
+tasa_periodo <- (tasa_nominal_anual/100) / periodos_capitalizacion
+total_periodos <- años * periodos_capitalizacion
+
+// Fórmula de valor futuro
+valor_futuro <- capital_inicial * (1 + tasa_periodo) ^ total_periodos
+
+Escribir "El valor futuro de la inversión es: ", valor_futuro
+FinAlgoritmo

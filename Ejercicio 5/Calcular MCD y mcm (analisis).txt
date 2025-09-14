@@ -1,0 +1,15 @@
+Plantear un algoritmo en PSEint (analisis, pseudocodigo, DFD, pruebas) que dados 3 valores numericos enteros A, B, y C mayores que cero, determine y resuelva:
+
+el Maximo Común Divisor de A, B, y C
+el minimo común multiplo de A, B, y C
+
+El maximo común divisor lo podemos calcular dividiendo todos sobre 2 y revisando si hay modulo, si no hay modulo 2 es el mcd, si hay modulo pasamos al 3 y repetimos hasta que divisor sea menor al numero menor, osea:
+
+for(i=2; i<menor; i++)
+
+y cuando el modulo sea 0 en A,B y C ya tenemos el MCD.
+
+Ahora para calcular el MCM hay una formula general, que es:
+MCM(a,b) (a*b)/MCD(a,b)
+
+que para hacer que esta formula funcione con 3 numeros (o 4, o 5, o 6) debemos hacer MCM(MCM(A,B),C). Es un problema recursivo (sin embargo al haber solo 3 numeros y no permitirse usar recursividad no usaremos recursividad)

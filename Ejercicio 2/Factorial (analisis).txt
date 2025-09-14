@@ -1,0 +1,11 @@
+plantear un algoritmo en PSEint (análisis, DFD, pseudocodigo, pruebas) que dado un valor entero n determine y muestre el factorial de n:
+
+input n
+
+hay que multiplicar n*n-1 hasta que n sea = 2
+
+se puede hacer con un for (i=n-1;n!=1;i--)
+
+dentro del for solo hay que hacer que n = n * i
+
+y ya luego solo se imprime i
